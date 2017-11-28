@@ -1,0 +1,141 @@
+$sol:#343A40
+$link:#aaabae
+$border:rgba(69, 74, 84, 0.7)
+
+*
+  box-sizing: border-box
+
+button
+  cursor: pointer
+
+a
+  text-decoration: none
+  &:focus,
+  &:active,
+  &:visited,
+  &:link
+    color: $link
+
+
+body
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  #solpanel
+    width: 300px
+    min-height: 100vh
+    background-color: $sol
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    a
+      margin: 0
+      padding: 0
+    #logo
+      font-size: 25px
+      font-weight: 800
+      color: white
+      padding: 15px 0
+      display: flex
+      justify-content: space-between
+      align-items: center
+      a
+        text-decoration: none
+        color: white!important
+    #menyu
+      margin-top: 30px
+      width: 100%
+      padding-left: 0
+      .badge
+        margin-left: 8px
+        padding: 7px 13px
+        font-size: 13px
+      li
+        list-style: none
+        width: 100%
+        border-bottom: 1px solid $border
+        font-size: 14px
+        a
+          display: block
+          width: 100%
+          color: $link
+          text-decoration: none
+          padding: 10px 20px
+          font-weight: 600
+          transition: .2s ease-in-out
+          &:hover
+            background-color: rgba(69, 74, 84, 0.3)
+            color: #fff
+          i
+            margin-right: 5px
+            width: 18px
+  #sagpanel
+    width: calc(100% - 300px)
+    padding: 0 15px
+    height: 100vh
+    overflow: auto
+    #basliq
+      padding: 14px 30px
+      border-bottom: 1px solid #eee
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 70px
+      *
+        margin: 0
+        padding: 0
+      a
+        color: $sol
+        display: flex
+        align-items: center
+        text-decoration: none
+        font-weight: 600
+        cursor: pointer
+        i
+          width: 18px
+          font-size: 20px
+          margin-right: 5px
+          position: relative
+          top: 1px
+      a:nth-of-type(2)
+        i
+          font-size: 18px
+
+
+#hamburgermenyusu
+  display: none
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 30px
+
+  span
+    display: block
+    background-color: white
+    width: 100%
+    height: 5px
+    margin-bottom: 4px
+    &:last-of-type
+      margin-bottom: 0
+
+@media (max-width: 768px)
+  body
+    flex-direction: column
+    align-items: flex-start
+  #solpanel
+    width: 100% !important
+    min-height: 67px!important
+    #logo
+      padding-left: 20px!important
+      padding-right: 20px!important
+      width: 100%
+  #menyu
+    margin: 0!important
+    display: none
+  #hamburgermenyusu
+    display: flex
+  #sagpanel
+    width: 100% !important
+
+
